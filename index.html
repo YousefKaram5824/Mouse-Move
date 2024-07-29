@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="moon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Playwrite+BE+VLG:wght@100..400&display=swap');
+    </style>
+    <title>Mouse Move</title>
+</head>
+
+<body>
+    <h1>Happy Birthday, My YoYa 🥳🎉❤️🌚</h1>
+    <div class="box">
+        <span style="--i:1"><img src="yoya1.jpg"></span>
+        <span style="--i:2"><img src="yoya2.png"></span>
+        <span style="--i:3"><img src="yoya3.jpg"></span>
+        <span style="--i:4"><img src="yoya4.jpg"></span>
+        <span style="--i:5"><img src="yoya5.jpg"></span>
+        <span style="--i:6"><img src="yoya6.jpg"></span>
+        <span style="--i:7"><img src="yoya7.jpg"></span>
+        <span style="--i:8"><img src="cover.jpg"></span>
+    </div>
+    <script>
+        let box = document.querySelector('.box');
+        window.onmousemove = function (event) {
+            let x = event.clientX / 3;
+            let y = event.clientY;
+            let width = box.clientWidth;
+            let height = box.clientHeight;
+            box.style.transform = "perspective(1000px) rotateY(" + x + "deg)";
+        }
+    </script>
+</body>
+
+</html>
